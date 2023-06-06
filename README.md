@@ -1,27 +1,4 @@
 
-## About This Repository
-
-This is a repository created to serve as a basis for those who intend to create a Laravel project using Breeze with multiple guards/auth, where it is possible to create a website and an admin panel with separate authentication for each one.
-
-Unlike many tutorials that teach you how to achieve this goal, this repository is in fact complete and has all the basic functional functions in the admin panel.
-
-### Site(User)
-- Register
-- Login
-- Logout
-- Forgot Password
-- Reset Password
-- Confirm Password
-- Verify Email
-
-### Admin
-- Login with email or username
-- Logout
-- Forgot Password
-- Reset Password
-- Confirm Password
-- Verify Email
-
 ## Installation
 
 Clone this repo
