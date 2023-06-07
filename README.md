@@ -18,9 +18,13 @@ Install packages
 Generate key
 
     php artisan key:generate
+    
+   Run migratioon with Seed 
+
+php artisan migrate:fresh --seed
+
 
 Run migratioon with Seed 
-php artisan migrate:fresh --seed
 
 admin login details : admin@admin.com
 Password : password
