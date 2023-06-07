@@ -15,7 +15,7 @@ Generate key
 
 Install packages
 
-    composer install
+    composer Update 
 
 Run migrations without admins/users
 
