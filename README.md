@@ -16,8 +16,11 @@ Install packages
     composer Update 
 
 Generate key
+        php artisan key:generate
 
-    php artisan key:generate
+
+
+
     
     Run migratioon with Seed
 
