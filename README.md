@@ -9,21 +9,18 @@ Create env file and set up your DB connection
 
     cp .env.example .env
 
-Generate key
 
-    php artisan key:generate
 
 Install packages
 
     composer Update 
 
-Run migrations without admins/users
+Generate key
 
-    php artisan migrate
+    php artisan key:generate
 
-Or run migrations with admins/users
-
-    php artisan migrate --seed
+Run migratioon with Seed 
+php artisan migrate:fresh --seed
 
 admin login details : admin@admin.com
 Password : password
