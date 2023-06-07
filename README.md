@@ -19,9 +19,13 @@ Generate key
 
     php artisan key:generate
     
-   Run migratioon with Seed 
+    Run migratioon with Seed
 
-php artisan migrate:fresh --seed
+   php artisan migrate:fresh --seed
+    
+   
+
+
 
 
 Run migratioon with Seed 
