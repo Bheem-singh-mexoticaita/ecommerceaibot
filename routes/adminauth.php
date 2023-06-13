@@ -40,6 +40,7 @@ Route::middleware('admin')->group(function(){
 
     // Catagory Routes
     Route::prefix('category')->group(function () {
+        Route::get('/getStudents', [CatagoryController::class, 'getStudents'])->name('getStudents');
         Route::get('/all', [CatagoryController::class, 'index'])->name('all.category');
         Route::get('/add', [CatagoryController::class, 'create'])->name('add.category');
         Route::post('/store', [CatagoryController::class, 'store'])->name('store.category');

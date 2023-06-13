@@ -1,61 +1,54 @@
 @extends('layouts.Admin.app')
 @section('title', 'All Catagories')
 @section('admincontent')
-@if ($message = Session::get('success'))
-<div class="alert alert-success alert-dismissible fade show" role="alert">
-  <strong>{{ $message }}</strong>
-  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
-@endif
-
-<div class="page-header">
-    <h3 class="page-title"> All Category
-    </h3>
-
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Category </a></li>
-        <li class="breadcrumb-item active" aria-current="page">All Catagory</li>
-      </ol>
-    </nav>
-
-  </div>
-  <div class="append_class">
-    <a href="{{ route('admin.add.category') }}" class="btn btn-primary me-2"><i class="fe fe-plus-circle"></i> Add Category</a>
-
-    </div>
-  <div class="col-lg-12 grid-margin stretch-card">
-    <div class="card">
-      <div class="card-body">
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th>Sno </th>
-              <th> Catagory Name </th>
-              <th>Catagory Image</th>
-
-              <th> Action </th>
-            </tr>
-          </thead>
-          <tbody>
-            @foreach ($category as $key => $item)
-            <tr>
-                <td>{{ $key+1 }}</td>
-                <td>{{ $item->category_name }}</td>
-                <td><img src="{{ asset('upload/category/' . $item->category_image) }}" alt="{{ $item->category_image }}"></td>
-
-                <td>
-                    <a href="{{ route('admin.edit.category', $item->id) }}" class="btn btn-info text-white">Edit</a>
-                    <a href="{{ route('admin.delete.category', $item->id) }}" id="delete" class="btn btn-danger">Delete</a>
-
-                </td>
-            </tr>
-            @endforeach
-        </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
+	    
+<div class="app-content pt-3 p-md-3 p-lg-4">
+    <div class="container-xl">
+        
+        <div class="row g-3 mb-4 align-items-center justify-content-between">
+            <div class="col-auto">
+                <h1 class="app-page-title mb-0">All Catagories</h1>
+            </div>
+            <div class="col-auto">
+                 <div class="page-utilities">
+                    <div class="row g-2 justify-content-start justify-content-md-end align-items-center">
+                        <div class="col-auto">						    
+                            <a class="btn app-btn-secondary" href="#">
+                                <i class="fa-solid fa-plus"></i>
+                               Add Catagory 
+                            </a>
+                        </div>
+                    </div><!--//row-->
+                </div><!--//table-utilities-->
+            </div><!--//col-auto-->
+        </div><!--//row-->   
+        <div class="tab-content" id="orders-table-tab-content">
+            <input type="hidden" naem ="ajaxurl" value="{{route('admin.category.getStudents')}}"class="hidden">
+            <div class="app-card app-card-orders-table shadow-sm mb-5">
+                <div class="app-card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                                <th>Sno </th>
+                                <th> Catagory Name </th>
+                                <th>Catagory Image</th>
+                  
+                                <th> Action </th>
+                              </tr>
+                            </thead>
+                          
+                          </table>
+                    </div><!--//table-responsive-->
+                   
+                </div><!--//app-card-body-->		
+            </div><!--//app-card-->
+        </div><!--//tab-content-->
+        
+        
+        
+    </div><!--//container-fluid-->
+</div><!--//app-content-->
 
 
 
